@@ -16,5 +16,5 @@ app.add_middleware(
 )
 
 @app.get("/")
-def Hello():
+async def Hello():
     return {"Hello":"World!"}
