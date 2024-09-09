@@ -1,7 +1,5 @@
-import crud
-import schemas
-import models
-from database import SessionLocal, engine
+from . import crud, schemas, models
+from .database import SessionLocal, engine
 from typing import List
 from sqlalchemy.orm import Session
 from fastapi import Depends, FastAPI, HTTPException
