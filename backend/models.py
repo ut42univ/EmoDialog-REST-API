@@ -10,6 +10,12 @@ class Diary(Base):
     id = Column(Integer, primary_key=True, index=True)
     title = Column(String)
     body = Column(String)
-    created_at = Column(String, default=datetime.now(pytz.timezone('Asia/Tokyo')).strftime('%Y-%m-%d %H:%M'))
-    updated_at = Column(String, default=datetime.now(pytz.timezone('Asia/Tokyo')).strftime('%Y-%m-%d %H:%M'),
-                         onupdate=datetime.now(pytz.timezone('Asia/Tokyo')).strftime('%Y-%m-%d %H:%M'))
+    created_at = Column(
+        String,
+        default=datetime.now(pytz.timezone('Asia/Tokyo')).strftime('%Y-%m-%d %H:%M')
+        )
+    updated_at = Column(
+        String,
+        default=datetime.now(pytz.timezone('Asia/Tokyo')).strftime('%Y-%m-%d %H:%M'),
+        onupdate=datetime.now(pytz.timezone('Asia/Tokyo')).strftime('%Y-%m-%d %H:%M')
+        )
